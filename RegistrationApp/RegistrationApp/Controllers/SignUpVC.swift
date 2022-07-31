@@ -15,15 +15,28 @@ class SignUpVC: UIViewController {
     }
     
     @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var passwordConfirmation: UITextField!
+    @IBOutlet weak var buttonNext: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordInput.isSecureTextEntry = true
+        passwordConfirmation.isSecureTextEntry = true
+        buttonNext.frame.size.width = 125
+        buttonNext.frame.size.height = 125
+        buttonNext.layer.cornerRadius = buttonNext.frame.width / 2
+        buttonNext.layer.masksToBounds = true
     }
     @IBAction func buttonPressed() {
-        if passwordInput.isSecureTextEntry == true {
-            passwordInput.isSecureTextEntry = false
+        showPass(field: passwordInput)
+    }
+    @IBAction func buttonPressedConfirm() {
+        showPass(field: passwordConfirmation)
+    }
+    func showPass (field:UITextField) -> Void {
+        if field.isSecureTextEntry == true {
+            field.isSecureTextEntry = false
         } else {
-            passwordInput.isSecureTextEntry = true
+            field.isSecureTextEntry = true
         }
     }
 }

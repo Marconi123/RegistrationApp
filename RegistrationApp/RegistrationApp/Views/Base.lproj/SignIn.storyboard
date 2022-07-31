@@ -59,43 +59,45 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G3-e3-esK">
-                                <rect key="frame" x="58" y="215" width="88" height="36"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" systemColor="tertiaryLabelColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-XS-AJH">
                                 <rect key="frame" x="25" y="469.33333333333331" width="378" height="31"/>
+                                <color key="tintColor" red="0.53469894209731006" green="0.81120848270279688" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create a new account"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create an account"/>
                                 <connections>
                                     <segue destination="ttQ-TJ-Api" kind="show" id="BBE-iW-ZAq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-EQ-nJS">
-                                <rect key="frame" x="277" y="573" width="90" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cjz-VK-RZ4">
+                                <rect key="frame" x="101" y="133" width="226" height="177"/>
+                                <color key="tintColor" red="1" green="0.70041654977647938" blue="0.32311952713156578" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-EQ-nJS">
+                                <rect key="frame" x="25" y="545.33333333333337" width="378" height="31"/>
+                                <color key="backgroundColor" red="0.8758804587237623" green="1" blue="0.53898786194920378" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.69103565445368087" green="0.81018019512475625" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="person.crop.circle" catalog="system" title="Sign In">
-                                    <color key="baseBackgroundColor" red="0.76942896842956543" green="0.67733064803371135" blue="0.35825518563229397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                    <color key="baseBackgroundColor" red="0.76942896842956543" green="0.547208388394401" blue="0.49209519793876061" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vff-XS-AJH" firstAttribute="top" secondItem="hiC-cl-js5" secondAttribute="bottom" constant="10" id="0KX-wW-bqP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8G3-e3-esK" secondAttribute="trailing" symbolic="YES" id="8ZT-A7-rR5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vff-XS-AJH" secondAttribute="trailing" constant="25" id="Emo-zJ-AuU"/>
-                            <constraint firstItem="hiC-cl-js5" firstAttribute="top" secondItem="8G3-e3-esK" secondAttribute="bottom" constant="113" id="OvX-cC-S3m"/>
-                            <constraint firstItem="8G3-e3-esK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="SeW-jV-2Ij"/>
-                            <constraint firstItem="hiC-cl-js5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="X5f-EJ-h2z"/>
-                            <constraint firstItem="Vff-XS-AJH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Zxh-Bu-VC4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hiC-cl-js5" secondAttribute="trailing" constant="25" id="diU-AZ-NOo"/>
-                            <constraint firstItem="8G3-e3-esK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="y9G-TD-lK0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vff-XS-AJH" secondAttribute="trailing" constant="25" id="7Ru-hJ-IJ2"/>
+                            <constraint firstItem="Vff-XS-AJH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CDL-OZ-BDf"/>
+                            <constraint firstItem="cjz-VK-RZ4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.528037" id="FAY-eY-7f4"/>
+                            <constraint firstItem="hiC-cl-js5" firstAttribute="top" secondItem="cjz-VK-RZ4" secondAttribute="bottom" constant="53.670000000000002" id="MYP-XI-046"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hiC-cl-js5" secondAttribute="trailing" constant="25" id="NkI-NR-Lzh"/>
+                            <constraint firstItem="2IV-EQ-nJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="R2N-L4-qne"/>
+                            <constraint firstItem="hiC-cl-js5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="RT8-xV-x6M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2IV-EQ-nJS" secondAttribute="trailing" constant="25" id="TdD-ID-s44"/>
+                            <constraint firstItem="cjz-VK-RZ4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vd0-en-QoZ"/>
+                            <constraint firstItem="2IV-EQ-nJS" firstAttribute="top" secondItem="Vff-XS-AJH" secondAttribute="bottom" constant="45" id="Vrx-KA-Gly"/>
+                            <constraint firstItem="cjz-VK-RZ4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.192585" id="Zxa-qA-yax"/>
+                            <constraint firstItem="cjz-VK-RZ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="jWP-Vr-ftc"/>
+                            <constraint firstItem="Vff-XS-AJH" firstAttribute="top" secondItem="hiC-cl-js5" secondAttribute="bottom" constant="10" id="zcJ-41-UhU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fcy-fz-wyM"/>
@@ -105,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757.97101449275374" y="81.696428571428569"/>
+            <point key="canvasLocation" x="757.00934579439252" y="81.641468682505405"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="uNZ-zY-Rkw">
@@ -137,15 +139,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

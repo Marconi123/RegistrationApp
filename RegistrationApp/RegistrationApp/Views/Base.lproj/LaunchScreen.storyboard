@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveform.path.ecg.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5NK-c3-sq5">
-                                <rect key="frame" x="25" y="236" width="364" height="178"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VladIncorporation App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7j9-jP-QCu">
                                 <rect key="frame" x="25" y="440.5" width="364" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -29,13 +26,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5NK-c3-sq5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="191" id="5Q9-lb-7nB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5NK-c3-sq5" secondAttribute="trailing" constant="25" id="OT2-Xk-Cz3"/>
-                            <constraint firstItem="5NK-c3-sq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="S76-cc-Yde"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7j9-jP-QCu" secondAttribute="trailing" constant="25" id="T0n-5O-6nr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5NK-c3-sq5" secondAttribute="bottom" constant="446.5" id="jFN-QJ-OBc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7j9-jP-QCu" secondAttribute="bottom" constant="385.5" id="mvn-nI-nnm"/>
                             <constraint firstItem="7j9-jP-QCu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="vXM-aT-QRx"/>
-                            <constraint firstItem="7j9-jP-QCu" firstAttribute="top" secondItem="5NK-c3-sq5" secondAttribute="bottom" constant="25" id="zLv-zf-7nn"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,7 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="waveform.path.ecg.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
