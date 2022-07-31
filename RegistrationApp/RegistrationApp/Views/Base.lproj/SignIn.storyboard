@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign UpVC-->
+        <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignUpVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,20 +67,33 @@
                                 <color key="shadowColor" systemColor="tertiaryLabelColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vff-XS-AJH">
+                                <rect key="frame" x="25" y="469.33333333333331" width="378" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create a new account"/>
+                                <connections>
+                                    <segue destination="ttQ-TJ-Api" kind="show" id="BBE-iW-ZAq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-EQ-nJS">
-                                <rect key="frame" x="243" y="573" width="90" height="31"/>
+                                <rect key="frame" x="277" y="573" width="90" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="person.crop.circle" catalog="system" title="Sign In"/>
+                                <buttonConfiguration key="configuration" style="filled" image="person.crop.circle" catalog="system" title="Sign In">
+                                    <color key="baseBackgroundColor" red="0.76942896842956543" green="0.67733064803371135" blue="0.35825518563229397" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Vff-XS-AJH" firstAttribute="top" secondItem="hiC-cl-js5" secondAttribute="bottom" constant="10" id="0KX-wW-bqP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8G3-e3-esK" secondAttribute="trailing" symbolic="YES" id="8ZT-A7-rR5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vff-XS-AJH" secondAttribute="trailing" constant="25" id="Emo-zJ-AuU"/>
                             <constraint firstItem="hiC-cl-js5" firstAttribute="top" secondItem="8G3-e3-esK" secondAttribute="bottom" constant="113" id="OvX-cC-S3m"/>
                             <constraint firstItem="8G3-e3-esK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="SeW-jV-2Ij"/>
                             <constraint firstItem="hiC-cl-js5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="X5f-EJ-h2z"/>
+                            <constraint firstItem="Vff-XS-AJH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Zxh-Bu-VC4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hiC-cl-js5" secondAttribute="trailing" constant="25" id="diU-AZ-NOo"/>
                             <constraint firstItem="8G3-e3-esK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="y9G-TD-lK0"/>
                         </constraints>
@@ -93,6 +106,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="81.696428571428569"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="uNZ-zY-Rkw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="ttQ-TJ-Api" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BGa-aD-WD1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgX-nx-wuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WTy-9e-Cdd">
