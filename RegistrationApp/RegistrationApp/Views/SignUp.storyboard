@@ -116,9 +116,12 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbc-r3-ifi">
-                                                <rect key="frame" x="286" y="537" width="54" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbc-r3-ifi">
+                                                <rect key="frame" x="239" y="523" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="74M-9l-tj4"/>
+                                                    <constraint firstAttribute="width" constant="150" id="Y0R-51-QUp"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Next"/>
                                                 <connections>
@@ -131,6 +134,8 @@
                                             <constraint firstAttribute="height" constant="818" id="25d-KO-Sbs"/>
                                             <constraint firstAttribute="trailing" secondItem="tj8-f9-jLr" secondAttribute="trailing" constant="25" id="6Ek-68-Hto"/>
                                             <constraint firstItem="OQY-2l-JlJ" firstAttribute="top" secondItem="SjZ-tw-iyI" secondAttribute="top" constant="80" id="7DE-uN-vDY"/>
+                                            <constraint firstAttribute="trailing" secondItem="lbc-r3-ifi" secondAttribute="trailing" constant="25" id="C40-Zn-Lpq"/>
+                                            <constraint firstAttribute="bottom" secondItem="lbc-r3-ifi" secondAttribute="bottom" constant="145" id="elZ-iZ-aqj"/>
                                             <constraint firstItem="tj8-f9-jLr" firstAttribute="top" secondItem="OQY-2l-JlJ" secondAttribute="bottom" constant="25" id="fV0-Ub-ejk"/>
                                             <constraint firstItem="tj8-f9-jLr" firstAttribute="leading" secondItem="SjZ-tw-iyI" secondAttribute="leading" constant="25" id="mEI-4d-4cV"/>
                                             <constraint firstItem="OQY-2l-JlJ" firstAttribute="leading" secondItem="SjZ-tw-iyI" secondAttribute="leading" constant="105" id="y02-cO-Qj6"/>
