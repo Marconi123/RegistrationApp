@@ -208,7 +208,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="nKh-25-6h5" kind="presentation" id="OGb-b1-sSv"/>
+                        <segue destination="nKh-25-6h5" kind="presentation" identifier="goToLastPage" id="OGb-b1-sSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aue-qR-U9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
