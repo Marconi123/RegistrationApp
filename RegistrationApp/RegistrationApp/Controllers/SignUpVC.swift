@@ -41,5 +41,6 @@ class SignUpVC: UIViewController {
         } else {
             field.isSecureTextEntry = true
         }
+        
     }
 }

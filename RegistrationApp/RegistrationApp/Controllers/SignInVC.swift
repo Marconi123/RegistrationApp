@@ -24,5 +24,14 @@ class SignInVC: UIViewController {
         performSegue(withIdentifier: "goToSignUp", sender: nil)
     }
     @IBAction func loginBtn() {
+        
     }
+
+func alert(title: String, message: String, style: UIAlertController.Style) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+    let action = UIAlertAction(title: "Ok", style: .default) { _ in
+    }
+    alertController.addAction(action)
+    self.present(alertController, animated: true, completion: nil)
+}
 }
