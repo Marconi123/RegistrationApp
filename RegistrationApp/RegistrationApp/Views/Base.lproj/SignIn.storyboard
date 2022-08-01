@@ -89,6 +89,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0l-v3-ZA8"/>
+                                            <segue destination="Qsp-MK-zfz" kind="show" identifier="goToMain" id="XVh-vO-nTY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -127,6 +128,16 @@
             </objects>
             <point key="canvasLocation" x="757.00934579439252" y="81.641468682505405"/>
         </scene>
+        <!--Main-->
+        <scene sceneID="SoC-13-2em">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Qsp-MK-zfz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BxT-7t-slr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4r-mi-JoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="246"/>
+        </scene>
         <!--SignUp-->
         <scene sceneID="uNZ-zY-Rkw">
             <objects>
@@ -135,7 +146,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgX-nx-wuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="235"/>
+            <point key="canvasLocation" x="1288" y="-76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WTy-9e-Cdd">
