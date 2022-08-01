@@ -32,6 +32,9 @@ class SignUpVC: UIViewController {
     @IBAction func buttonPressedConfirm() {
         showPass(field: passwordConfirmation)
     }
+    @IBAction func buttonNextAct() {
+        performSegue(withIdentifier: "goToVerification", sender: nil)
+    }
     func showPass (field:UITextField) -> Void {
         if field.isSecureTextEntry == true {
             field.isSecureTextEntry = false
