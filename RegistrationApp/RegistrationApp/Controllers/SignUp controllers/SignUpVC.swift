@@ -37,12 +37,7 @@ final class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        passwordInput.isSecureTextEntry = true
-        passwordConfirmation.isSecureTextEntry = true
-        buttonNext.frame.size.width = 125
-        buttonNext.frame.size.height = 125
-        buttonNext.layer.cornerRadius = buttonNext.frame.width / 2
-        buttonNext.layer.masksToBounds = true
+        roundButton(button: buttonNext)
     }
     
     // MARK: - Actions
@@ -60,6 +55,7 @@ final class SignUpVC: UIViewController {
        }
     
     @IBAction func passwordTFAction(_ sender: UITextField) {
+        secureField(field: sender)
         if let pass = sender.text,
            !pass.isEmpty {
            passwordStrength = VerificationService.isValidPassword(pass: pass)
@@ -68,6 +64,7 @@ final class SignUpVC: UIViewController {
         setupViews()
     }
     @IBAction func passwordConfirmTFAction(_ sender: UITextField) {
+        secureField(field: sender)
         if let confPass = sender.text,
            !confPass.isEmpty,
            let passText = passwordInput.text,
@@ -81,12 +78,21 @@ final class SignUpVC: UIViewController {
         errorConfPassMessage.isHidden = isConfPass
         setupViews()
     }
+    
+    // Secure eye button
+    
     @IBAction func buttonPressed() {
         showPass(field: passwordInput)
     }
+    
+    // Secure eye button
+    
     @IBAction func buttonPressedConfirm() {
         showPass(field: passwordConfirmation)
     }
+    
+    // Confirm button
+    
     @IBAction func buttonNextAct() {
         if let email = emailTF.text,
            let pass = passwordInput.text {
@@ -126,5 +132,16 @@ final class SignUpVC: UIViewController {
         let userModel = sender as? UserModel {
             codeVerifVC.userModelRec = userModel
         }
+    }
+    
+    private func secureField (field: UITextField) {
+        field.isSecureTextEntry = true
+    }
+    
+    private func roundButton(button: UIButton) {
+        button.frame.size.width = 125
+        button.frame.size.height = 125
+        button.layer.cornerRadius = button.frame.width / 2
+        button.layer.masksToBounds = true
     }
 }
