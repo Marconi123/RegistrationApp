@@ -71,7 +71,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Create an account"/>
                                         <connections>
-                                            <action selector="createAnAccountBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="FkC-hr-AtJ"/>
+                                            <action selector="createAnAccountBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7K-NH-YzK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-EQ-nJS">
@@ -116,16 +116,27 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fcy-fz-wyM"/>
                     <connections>
-                        <outlet property="btnSignIn" destination="2IV-EQ-nJS" id="7fC-d8-vVf"/>
+                        <outlet property="btnSignIn" destination="Vff-XS-AJH" id="PbL-ua-wcO"/>
                         <outlet property="emailField" destination="l16-TF-1Oa" id="Trq-LX-i79"/>
                         <outlet property="loginButtonOutl" destination="2IV-EQ-nJS" id="NMu-TY-3nd"/>
                         <outlet property="passwordTextField" destination="Jjo-Yq-VrY" id="YGq-Yl-QpX"/>
                         <segue destination="ttQ-TJ-Api" kind="show" identifier="goToSignUp" id="2Hb-XI-0NL"/>
+                        <segue destination="Qsp-MK-zfz" kind="show" identifier="goToMain" id="wFc-Uc-6VE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="757.00934579439252" y="81.641468682505405"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="SoC-13-2em">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Qsp-MK-zfz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BxT-7t-slr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4r-mi-JoU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="246"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="uNZ-zY-Rkw">
@@ -135,7 +146,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgX-nx-wuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="235"/>
+            <point key="canvasLocation" x="1288" y="-76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WTy-9e-Cdd">
