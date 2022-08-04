@@ -16,6 +16,9 @@
 		86AFA4C7289894550051AAF1 /* CodeVerifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4C6289894550051AAF1 /* CodeVerifVC.swift */; };
 		86AFA4C9289899720051AAF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFA4C8289899720051AAF1 /* Main.storyboard */; };
 		86AFA4CF28989AAC0051AAF1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4CE28989AAC0051AAF1 /* MainVC.swift */; };
+		86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4D3289AF4480051AAF1 /* VerificationService.swift */; };
+		86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */; };
+		86AFA4DB289B317D0051AAF1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4DA289B317D0051AAF1 /* UserModel.swift */; };
 		86FF19882896F04300EB3608 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FF19872896F04300EB3608 /* SignUp.storyboard */; };
 		86FF198A2896F46A00EB3608 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF19892896F46A00EB3608 /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,9 @@
 		86AFA4C6289894550051AAF1 /* CodeVerifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifVC.swift; sourceTree = "<group>"; };
 		86AFA4C8289899720051AAF1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		86AFA4CE28989AAC0051AAF1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		86AFA4D3289AF4480051AAF1 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
+		86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		86AFA4DA289B317D0051AAF1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		86FF19872896F04300EB3608 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		86FF19892896F46A00EB3608 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,9 +72,12 @@
 		8694801A28959347004229FB /* RegistrationApp */ = {
 			isa = PBXGroup;
 			children = (
-				8694802F2895A516004229FB /* Delegates */,
+				86AFA4D9289B31720051AAF1 /* Model */,
+				86AFA4D0289AF40C0051AAF1 /* Services */,
 				869480302895A51B004229FB /* Controllers */,
+				86AFA4D6289B206A0051AAF1 /* Extensions */,
 				869480312895A538004229FB /* Views */,
+				8694802F2895A516004229FB /* Delegates */,
 				8694802428959348004229FB /* Assets.xcassets */,
 				8694802928959348004229FB /* Info.plist */,
 			);
@@ -120,6 +129,30 @@
 				869480322895F604004229FB /* SignInVC.swift */,
 			);
 			path = "SignIn controllers";
+			sourceTree = "<group>";
+		};
+		86AFA4D0289AF40C0051AAF1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				86AFA4D3289AF4480051AAF1 /* VerificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		86AFA4D6289B206A0051AAF1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86AFA4D9289B31720051AAF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				86AFA4DA289B317D0051AAF1 /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +228,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */,
+				86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */,
 				86FF198A2896F46A00EB3608 /* SignUpVC.swift in Sources */,
 				86AFA4CF28989AAC0051AAF1 /* MainVC.swift in Sources */,
 				8694801C28959347004229FB /* AppDelegate.swift in Sources */,
 				869480332895F604004229FB /* SignInVC.swift in Sources */,
 				86AFA4C7289894550051AAF1 /* CodeVerifVC.swift in Sources */,
+				86AFA4DB289B317D0051AAF1 /* UserModel.swift in Sources */,
 				8694801E28959347004229FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
