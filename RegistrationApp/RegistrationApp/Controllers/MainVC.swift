@@ -9,11 +9,20 @@ import UIKit
 
 class MainVC: UITabBarController {
 
+    // MARK: - IBOutlets
+    
+    
+    // MARK: - Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    // MARK: - Actions
+    
+    // MARK: - Functions
     
 
     /*

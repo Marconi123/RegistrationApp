@@ -19,6 +19,9 @@
 		86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4D3289AF4480051AAF1 /* VerificationService.swift */; };
 		86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */; };
 		86AFA4DB289B317D0051AAF1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4DA289B317D0051AAF1 /* UserModel.swift */; };
+		86FD3D3A289F0A1500132CCD /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD3D39289F0A1500132CCD /* WelcomeVC.swift */; };
+		86FD3D3C289F39A800132CCD /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD3D3B289F39A800132CCD /* UserDefaultsService.swift */; };
+		86FD3D3E289F3A2A00132CCD /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD3D3D289F3A2A00132CCD /* UserDefaultsExtension.swift */; };
 		86FF19882896F04300EB3608 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FF19872896F04300EB3608 /* SignUp.storyboard */; };
 		86FF198A2896F46A00EB3608 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF19892896F46A00EB3608 /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		86AFA4D3289AF4480051AAF1 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		86AFA4DA289B317D0051AAF1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		86FD3D39289F0A1500132CCD /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		86FD3D3B289F39A800132CCD /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		86FD3D3D289F3A2A00132CCD /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		86FF19872896F04300EB3608 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		86FF19892896F46A00EB3608 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +125,7 @@
 			children = (
 				86FF19892896F46A00EB3608 /* SignUpVC.swift */,
 				86AFA4C6289894550051AAF1 /* CodeVerifVC.swift */,
+				86FD3D39289F0A1500132CCD /* WelcomeVC.swift */,
 			);
 			path = "SignUp controllers";
 			sourceTree = "<group>";
@@ -135,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				86AFA4D3289AF4480051AAF1 /* VerificationService.swift */,
+				86FD3D3B289F39A800132CCD /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */,
+				86FD3D3D289F3A2A00132CCD /* UserDefaultsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */,
+				86FD3D3C289F39A800132CCD /* UserDefaultsService.swift in Sources */,
+				86FD3D3A289F0A1500132CCD /* WelcomeVC.swift in Sources */,
 				86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */,
 				86FF198A2896F46A00EB3608 /* SignUpVC.swift in Sources */,
 				86AFA4CF28989AAC0051AAF1 /* MainVC.swift in Sources */,
@@ -236,6 +247,7 @@
 				869480332895F604004229FB /* SignInVC.swift in Sources */,
 				86AFA4C7289894550051AAF1 /* CodeVerifVC.swift in Sources */,
 				86AFA4DB289B317D0051AAF1 /* UserModel.swift in Sources */,
+				86FD3D3E289F3A2A00132CCD /* UserDefaultsExtension.swift in Sources */,
 				8694801E28959347004229FB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +401,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SignUp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -417,6 +430,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = SignUp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
