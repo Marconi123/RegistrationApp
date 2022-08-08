@@ -23,6 +23,7 @@ final class SecondPageVC: UIViewController {
     @IBOutlet private weak var passwordLabel: UILabel!
     @IBOutlet private weak var passwordTF: UITextField!
     @IBOutlet private weak var saveBtnOut: UIButton!
+    @IBOutlet private var viewsIndicatorPassword: [UIView]!
     
     // MARK: - Lify Cycle
     override func viewDidLoad() {
@@ -62,19 +63,21 @@ final class SecondPageVC: UIViewController {
         }
     }
     @IBAction func saveBtnAction(_ sender: UIButton) {
-        let email = emailTF.text, name = nameTF.text, password = passwordTF.text
-        if email != userModel?.email {
+        guard let name = nameTF.text, let email = emailTF.text, let password = passwordTF.text else { return }
+        let newUserModel = UserModel(name: name, email: email, password: password)
+        if newUserModel.name != userModel?.name {
+            UserDefaults.standard.set(name, forKey: UserDefaults.Keys.name.rawValue)
+            nameTF.text = ""
+        }
+        if newUserModel.email != userModel?.email {
             UserDefaults.standard.set(email, forKey: UserDefaults.Keys.email.rawValue)
             emailTF.text = ""
-        } else if name != userModel?.name {
-            UserDefaults.standard.set(name, forKey: UserDefaults.Keys.email.rawValue)
-            nameTF.text = ""
-        } else if password != userModel?.password {
-            UserDefaults.standard.set(password, forKey: UserDefaults.Keys.password.rawValue)
-            passwordTF.text = ""
         }
-        alert(title: "Saved", message: "Changes are saved", style: .alert)
-        setupUI()
+        if newUserModel.password != userModel?.password {
+            UserDefaults.standard.set(password, forKey: UserDefaults.Keys.password.rawValue)
+            passwordTF.text = "
+        }
+        alert(title: "Success", message: "Changes are saved", style: .alert)
     }
     // MARK: - Functions
     
@@ -90,7 +93,6 @@ final class SecondPageVC: UIViewController {
     private func updateContinueBtnState() {
         saveBtnOut.isEnabled = isSameName || isSameEmail || isSamePassword
     }
-    
     private func alert(title: String, message: String, style: UIAlertController.Style) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let action = UIAlertAction(title: "Ok", style: .default) { _ in

@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="cot-Vn-U56">
-                                <rect key="frame" x="25" y="194" width="364" height="299.5"/>
+                                <rect key="frame" x="25" y="194" width="364" height="368.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DqT-wR-ECr">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="64.5"/>
@@ -106,10 +106,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L14-bY-vKa">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L14-bY-vKa">
                                                 <rect key="frame" x="0.0" y="30.5" width="364" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
                                                 <connections>
                                                     <action selector="nameTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="0kt-l0-NPX"/>
                                                 </connections>
@@ -125,10 +125,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kB-hC-yAo">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kB-hC-yAo">
                                                 <rect key="frame" x="0.0" y="30.5" width="364" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 <connections>
                                                     <action selector="emailTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="K2w-NM-c04"/>
                                                 </connections>
@@ -136,7 +136,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9r4-XK-fT3">
-                                        <rect key="frame" x="0.0" y="235" width="364" height="64.5"/>
+                                        <rect key="frame" x="0.0" y="235" width="364" height="133.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-cc-grX">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -144,14 +144,49 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWS-v1-OYp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWS-v1-OYp">
                                                 <rect key="frame" x="0.0" y="30.5" width="364" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
                                                 <connections>
                                                     <action selector="passwordTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="Fvn-zC-MYG"/>
                                                 </connections>
                                             </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVm-sn-ZfW">
+                                                <rect key="frame" x="0.0" y="74.5" width="364" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <connections>
+                                                    <action selector="passwordTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="blr-0L-ObP"/>
+                                                </connections>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-kh-NjX">
+                                                <rect key="frame" x="0.0" y="118.5" width="364" height="15"/>
+                                                <subviews>
+                                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B38-4X-9kf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="15"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                    </view>
+                                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8G-jS-q69">
+                                                        <rect key="frame" x="92.5" y="0.0" width="87" height="15"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    </view>
+                                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-3Z-ZOk">
+                                                        <rect key="frame" x="184.5" y="0.0" width="87.5" height="15"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </view>
+                                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ev8-ip-hVc">
+                                                        <rect key="frame" x="277" y="0.0" width="87" height="15"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Mcb-3Z-ZOk" firstAttribute="width" secondItem="Ev8-ip-hVc" secondAttribute="width" id="fzj-wC-yfm"/>
+                                                    <constraint firstAttribute="height" constant="15" id="iAr-qv-yEG"/>
+                                                    <constraint firstItem="B38-4X-9kf" firstAttribute="width" secondItem="j8G-jS-q69" secondAttribute="width" id="oVF-C1-pfB"/>
+                                                    <constraint firstItem="j8G-jS-q69" firstAttribute="width" secondItem="Mcb-3Z-ZOk" secondAttribute="width" id="zV3-qa-sTg"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -184,6 +219,7 @@
                         <outlet property="passwordLabel" destination="gvD-cc-grX" id="Ruq-dj-pAf"/>
                         <outlet property="passwordTF" destination="ZWS-v1-OYp" id="vkd-8e-wVj"/>
                         <outlet property="saveBtnOut" destination="NpY-5a-H8n" id="cef-te-LPH"/>
+                        <outletCollection property="viewsIndicatorPassword" destination="B38-4X-9kf" collectionClass="NSMutableArray" id="jkQ-CB-n5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1w-sJ-bUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,6 +250,18 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
