@@ -13,7 +13,7 @@ final class UserDefautltsService {
                                   forKey: UserDefaults.Keys.name.rawValue)
         UserDefaults.standard.set(userModel.email,
                                   forKey: UserDefaults.Keys.email.rawValue)
-        UserDefaults.standard.set(userModel.name,
+        UserDefaults.standard.set(userModel.password,
                                   forKey: UserDefaults.Keys.password.rawValue)
     }
     static func getUserModel() -> UserModel? {

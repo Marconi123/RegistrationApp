@@ -284,7 +284,7 @@
                         <outlet property="codeTF" destination="O7r-OV-V2M" id="Vug-eD-SI1"/>
                         <outlet property="instructionTF" destination="8FU-TJ-S62" id="7wf-Hh-Lap"/>
                         <outlet property="labelCode" destination="cEa-XC-Jq3" id="y6z-Vv-vV3"/>
-                        <segue destination="nKh-25-6h5" kind="presentation" identifier="goToLastPage" id="OGb-b1-sSv"/>
+                        <segue destination="nKh-25-6h5" kind="show" identifier="goToLastPage" id="fIi-FW-VDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aue-qR-U9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -337,6 +337,7 @@
                             <constraint firstItem="4gr-eq-rM0" firstAttribute="leading" secondItem="dcE-3G-sm0" secondAttribute="leading" constant="25" id="uZX-ig-Fpo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8Ek-96-GWl"/>
                     <connections>
                         <outlet property="accountCreatedLbl" destination="XFs-sI-bEA" id="GlK-Bn-tap"/>
                         <outlet property="welcomeLbl" destination="GyU-hN-4uP" id="Cwr-79-FxP"/>

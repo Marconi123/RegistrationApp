@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8659E60628A0532600CA6DD6 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60528A0532600CA6DD6 /* FirstPageVC.swift */; };
+		8659E60B28A05F4500CA6DD6 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60A28A05F4500CA6DD6 /* MainTBC.swift */; };
+		8659E60D28A0616900CA6DD6 /* SecondPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60C28A0616900CA6DD6 /* SecondPageVC.swift */; };
 		8694801C28959347004229FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694801B28959347004229FB /* AppDelegate.swift */; };
 		8694801E28959347004229FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694801D28959347004229FB /* SceneDelegate.swift */; };
 		8694802328959347004229FB /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8694802128959347004229FB /* SignIn.storyboard */; };
@@ -15,7 +18,6 @@
 		869480332895F604004229FB /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869480322895F604004229FB /* SignInVC.swift */; };
 		86AFA4C7289894550051AAF1 /* CodeVerifVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4C6289894550051AAF1 /* CodeVerifVC.swift */; };
 		86AFA4C9289899720051AAF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFA4C8289899720051AAF1 /* Main.storyboard */; };
-		86AFA4CF28989AAC0051AAF1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4CE28989AAC0051AAF1 /* MainVC.swift */; };
 		86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4D3289AF4480051AAF1 /* VerificationService.swift */; };
 		86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */; };
 		86AFA4DB289B317D0051AAF1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFA4DA289B317D0051AAF1 /* UserModel.swift */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8659E60528A0532600CA6DD6 /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
+		8659E60A28A05F4500CA6DD6 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
+		8659E60C28A0616900CA6DD6 /* SecondPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageVC.swift; sourceTree = "<group>"; };
 		8694801828959347004229FB /* RegistrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8694801B28959347004229FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8694801D28959347004229FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +42,6 @@
 		869480322895F604004229FB /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = "RegistrationApp/Controllers/SignIn controllers/SignInVC.swift"; sourceTree = SOURCE_ROOT; };
 		86AFA4C6289894550051AAF1 /* CodeVerifVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifVC.swift; sourceTree = "<group>"; };
 		86AFA4C8289899720051AAF1 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		86AFA4CE28989AAC0051AAF1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		86AFA4D3289AF4480051AAF1 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		86AFA4D7289B20A20051AAF1 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		86AFA4DA289B317D0051AAF1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -59,6 +63,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8659E60728A0532E00CA6DD6 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				8659E60A28A05F4500CA6DD6 /* MainTBC.swift */,
+				8659E60528A0532600CA6DD6 /* FirstPageVC.swift */,
+				8659E60C28A0616900CA6DD6 /* SecondPageVC.swift */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
 		8694800F28959347004229FB = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +116,7 @@
 		869480302895A51B004229FB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				86AFA4CE28989AAC0051AAF1 /* MainVC.swift */,
+				8659E60728A0532E00CA6DD6 /* MainController */,
 				86AFA4C3289893590051AAF1 /* SignIn controllers */,
 				86AFA4C22898932B0051AAF1 /* SignUp controllers */,
 			);
@@ -238,15 +252,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */,
+				8659E60D28A0616900CA6DD6 /* SecondPageVC.swift in Sources */,
 				86FD3D3C289F39A800132CCD /* UserDefaultsService.swift in Sources */,
+				8659E60628A0532600CA6DD6 /* FirstPageVC.swift in Sources */,
 				86FD3D3A289F0A1500132CCD /* WelcomeVC.swift in Sources */,
 				86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */,
 				86FF198A2896F46A00EB3608 /* SignUpVC.swift in Sources */,
-				86AFA4CF28989AAC0051AAF1 /* MainVC.swift in Sources */,
 				8694801C28959347004229FB /* AppDelegate.swift in Sources */,
 				869480332895F604004229FB /* SignInVC.swift in Sources */,
 				86AFA4C7289894550051AAF1 /* CodeVerifVC.swift in Sources */,
 				86AFA4DB289B317D0051AAF1 /* UserModel.swift in Sources */,
+				8659E60B28A05F4500CA6DD6 /* MainTBC.swift in Sources */,
 				86FD3D3E289F3A2A00132CCD /* UserDefaultsExtension.swift in Sources */,
 				8694801E28959347004229FB /* SceneDelegate.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 import UIKit
 
 final class SignInVC: UIViewController {
-    // MARK: - IBoutlets
+    // MARK: - IBOutlets
 
     @IBOutlet private var btnSignIn: UIButton!
     @IBOutlet private var emailField: UITextField!
@@ -29,11 +29,17 @@ final class SignInVC: UIViewController {
     }
 
     @IBAction func loginBtn() {
-        if let email = emailField.text,
-           let pass = passwordTextField.text,
-           let userModel = UserDefautltsService.getUserModel(),
-           email == userModel.email, pass == userModel.password {
-            performSegue(withIdentifier: "goToMain", sender: nil)
+        let userModel = UserDefautltsService.getUserModel(),
+            email = emailField.text,
+            pass = passwordTextField.text
+        if email == userModel?.email, pass == userModel?.password {
+            performSegue(withIdentifier: "goToMain", sender: userModel)
+        } else if email != userModel?.email, pass != userModel?.password {
+            alert(title: "Error", message: "Verify entered data", style: .alert)
+        } else if email != userModel?.email {
+            alert(title: "Error", message: "Invalid email", style: .alert)
+        } else if pass != userModel?.password {
+            alert(title: "Error", message: "Invalid password", style: .alert)
         }
     }
 
@@ -52,5 +58,16 @@ final class SignInVC: UIViewController {
                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+       passwordTextField.isSecureTextEntry = true
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let firstPageVC = segue.destination as? FirstPageVC,
+              let userModel = sender as? UserModel {
+            firstPageVC.userModel = userModel
+              }
+    }
+    
 }
