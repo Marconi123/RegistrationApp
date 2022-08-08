@@ -19,8 +19,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbB-hi-MIC">
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SjZ-tw-iyI">
-                                        <rect key="frame" x="0.0" y="52" width="428" height="818"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjZ-tw-iyI">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQY-2l-JlJ">
                                                 <rect key="frame" x="105" y="80" width="204" height="31.333333333333329"/>
@@ -42,7 +42,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                         <connections>
-                                                            <action selector="emailTFAction:" destination="Y6W-OH-hqX" eventType="editingChanged" id="5LI-wQ-39U"/>
+                                                            <action selector="emailAction:" destination="Y6W-OH-hqX" eventType="editingChanged" id="DP5-6O-Zom"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification key will be sent to the email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u80-kg-zR8">
@@ -225,6 +225,7 @@
                         <outlet property="nameTF" destination="HPk-Aq-RtF" id="gAP-2T-jLp"/>
                         <outlet property="passwordConfirmation" destination="S9O-DX-BwK" id="G9V-B5-fbo"/>
                         <outlet property="passwordInput" destination="um3-MI-8IQ" id="O0i-C5-hbO"/>
+                        <outlet property="scrollview" destination="xbB-hi-MIC" id="HAG-ap-enB"/>
                         <outletCollection property="viewsPasswordIndicators" destination="y1I-ra-hQM" collectionClass="NSMutableArray" id="9O8-TZ-sqC"/>
                         <outletCollection property="viewsPasswordIndicators" destination="TVT-pA-Feo" collectionClass="NSMutableArray" id="UiI-DH-wjS"/>
                         <outletCollection property="viewsPasswordIndicators" destination="UjI-Im-PMx" collectionClass="NSMutableArray" id="zOr-QX-RqR"/>
@@ -247,7 +248,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zEW-C4-ZkM">
                                 <rect key="frame" x="25" y="147" width="378" height="184.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, enter secret key from your email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-TJ-S62">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, enter secret key from your email" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-TJ-S62">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="26.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -262,9 +263,9 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O7r-OV-V2M">
                                         <rect key="frame" x="0.0" y="150.33333333333331" width="378" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
                                         <connections>
-                                            <action selector="codeTFAction" destination="n7A-6Y-vZA" eventType="editingDidEndOnExit" id="xXM-f9-eBl"/>
+                                            <action selector="codeTFAction:" destination="n7A-6Y-vZA" eventType="editingChanged" id="9SM-lp-kFa"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -283,17 +284,17 @@
                         <outlet property="codeTF" destination="O7r-OV-V2M" id="Vug-eD-SI1"/>
                         <outlet property="instructionTF" destination="8FU-TJ-S62" id="7wf-Hh-Lap"/>
                         <outlet property="labelCode" destination="cEa-XC-Jq3" id="y6z-Vv-vV3"/>
-                        <segue destination="nKh-25-6h5" kind="presentation" identifier="goToLastPage" id="OGb-b1-sSv"/>
+                        <segue destination="nKh-25-6h5" kind="show" identifier="goToLastPage" id="fIi-FW-VDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aue-qR-U9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="78"/>
         </scene>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="Wry-Ws-nda">
             <objects>
-                <viewController id="nKh-25-6h5" sceneMemberID="viewController">
+                <viewController id="nKh-25-6h5" customClass="WelcomeVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcE-3G-sm0">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +302,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="4gr-eq-rM0">
                                 <rect key="frame" x="25" y="81.999999999999986" width="378" height="207.66666666666663"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account is created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-sI-bEA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account is created" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFs-sI-bEA">
                                         <rect key="frame" x="69.333333333333329" y="0.0" width="239.66666666666669" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -321,6 +322,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Continue">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="continueBtnAction" destination="nKh-25-6h5" eventType="touchUpInside" id="lTQ-3A-x70"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zfN-cs-Kjf"/>
@@ -333,6 +337,11 @@
                             <constraint firstItem="4gr-eq-rM0" firstAttribute="leading" secondItem="dcE-3G-sm0" secondAttribute="leading" constant="25" id="uZX-ig-Fpo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8Ek-96-GWl"/>
+                    <connections>
+                        <outlet property="accountCreatedLbl" destination="XFs-sI-bEA" id="GlK-Bn-tap"/>
+                        <outlet property="welcomeLbl" destination="GyU-hN-4uP" id="Cwr-79-FxP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68i-NA-dPu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
