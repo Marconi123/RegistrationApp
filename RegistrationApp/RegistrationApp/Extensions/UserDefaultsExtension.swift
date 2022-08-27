@@ -5,7 +5,7 @@
 //  Created by Владислав on 7.08.22.
 //
 
-import Foundation
+import UIKit
 
 extension UserDefaults {
 
@@ -20,5 +20,4 @@ extension UserDefaults {
    public func reset() {
         Keys.allCases.forEach { removeObject(forKey: $0.rawValue) }
     }
-
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FirstPageVC: UIViewController {
+final class FirstPageVC:BasicVC {
     
     // MARK: - Life cycle
     var userModel = UserDefautltsService.getUserModel()

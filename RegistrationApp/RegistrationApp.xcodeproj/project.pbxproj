@@ -10,6 +10,7 @@
 		8659E60628A0532600CA6DD6 /* FirstPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60528A0532600CA6DD6 /* FirstPageVC.swift */; };
 		8659E60B28A05F4500CA6DD6 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60A28A05F4500CA6DD6 /* MainTBC.swift */; };
 		8659E60D28A0616900CA6DD6 /* SecondPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60C28A0616900CA6DD6 /* SecondPageVC.swift */; };
+		8659E60F28A167BB00CA6DD6 /* BasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8659E60E28A167BB00CA6DD6 /* BasicVC.swift */; };
 		8694801C28959347004229FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694801B28959347004229FB /* AppDelegate.swift */; };
 		8694801E28959347004229FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8694801D28959347004229FB /* SceneDelegate.swift */; };
 		8694802328959347004229FB /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8694802128959347004229FB /* SignIn.storyboard */; };
@@ -32,6 +33,7 @@
 		8659E60528A0532600CA6DD6 /* FirstPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageVC.swift; sourceTree = "<group>"; };
 		8659E60A28A05F4500CA6DD6 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
 		8659E60C28A0616900CA6DD6 /* SecondPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageVC.swift; sourceTree = "<group>"; };
+		8659E60E28A167BB00CA6DD6 /* BasicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVC.swift; sourceTree = "<group>"; };
 		8694801828959347004229FB /* RegistrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8694801B28959347004229FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8694801D28959347004229FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		869480302895A51B004229FB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8659E60E28A167BB00CA6DD6 /* BasicVC.swift */,
 				8659E60728A0532E00CA6DD6 /* MainController */,
 				86AFA4C3289893590051AAF1 /* SignIn controllers */,
 				86AFA4C22898932B0051AAF1 /* SignUp controllers */,
@@ -254,6 +257,7 @@
 				86AFA4D8289B20A20051AAF1 /* UIViewControllerExtensions.swift in Sources */,
 				8659E60D28A0616900CA6DD6 /* SecondPageVC.swift in Sources */,
 				86FD3D3C289F39A800132CCD /* UserDefaultsService.swift in Sources */,
+				8659E60F28A167BB00CA6DD6 /* BasicVC.swift in Sources */,
 				8659E60628A0532600CA6DD6 /* FirstPageVC.swift in Sources */,
 				86FD3D3A289F0A1500132CCD /* WelcomeVC.swift in Sources */,
 				86AFA4D4289AF4480051AAF1 /* VerificationService.swift in Sources */,

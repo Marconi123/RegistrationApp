@@ -21,7 +21,7 @@ final class SignUpVC: UIViewController {
     /// confirm password
     @IBOutlet private var errorPasswordMessage: UILabel!
     @IBOutlet var errorConfPassMessage: UILabel!
-    /// indicators of password strentgh
+    /// indicators of password strength
     @IBOutlet private var viewsPasswordIndicators: [UIView]!
     /// confirm button
     @IBOutlet private var buttonNext: UIButton!
@@ -39,8 +39,8 @@ final class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        roundButton(button: buttonNext)
         startKeyboardObserver()
+        roundButton(button: buttonNext)
     }
     
     // MARK: - Actions

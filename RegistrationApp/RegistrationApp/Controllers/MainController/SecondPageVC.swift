@@ -7,25 +7,45 @@
 
 import UIKit
 
-final class SecondPageVC: UIViewController {
-    
-    private var isSameName  = false  {didSet { updateContinueBtnState() }}
-    private var isSamePassword = false {didSet { updateContinueBtnState() }}
-    private var isSameEmail = false {didSet { updateContinueBtnState() }}
+final class SecondPageVC: BasicVC {
+    private var isSameName = false { didSet { updateSaveBtnState() } }
+    private var isSamePassword = false { didSet { updateSaveBtnState() } }
+    private var isSameEmail = false { didSet { updateSaveBtnState() } }
+    private var passwordStrength: passwordStrength = .veryWeak { didSet { updateSaveBtnState() } }
+    private var isCofnPass = false { didSet { updateSaveBtnState() } }
+    private var isValidEmail = false { didSet { updateSaveBtnState() } }
     
     var userModel = UserDefautltsService.getUserModel()
+
     // MARK: - IBOutlets
     
-    @IBOutlet private weak var nameLabel: UILabel!
-    @IBOutlet private weak var nameTF: UITextField!
-    @IBOutlet private weak var emailLabel: UILabel!
-    @IBOutlet private weak var emailTF: UITextField!
-    @IBOutlet private weak var passwordLabel: UILabel!
-    @IBOutlet private weak var passwordTF: UITextField!
-    @IBOutlet private weak var saveBtnOut: UIButton!
+    // Name label
+    @IBOutlet private var nameLabel: UILabel!
+    // Name TextField
+    @IBOutlet private var nameTF: UITextField!
+    // Email label
+    @IBOutlet private var emailLabel: UILabel!
+    // Email TextField
+    @IBOutlet private var emailTF: UITextField!
+    // Password label
+    @IBOutlet private var passwordLabel: UILabel!
+    // Password TextField
+    @IBOutlet private var passwordTF: UITextField!
+    // ConfirmPassword TextField
+    @IBOutlet private var confirmPasswordLbl: UITextField!
+    // Save button
+    @IBOutlet private var saveBtnOut: UIButton!
+    // Views indicate password strength
     @IBOutlet private var viewsIndicatorPassword: [UIView]!
+    // Error label for email
+    @IBOutlet private var emailErrorLbl: UILabel!
+    // Error label for password
+    @IBOutlet private var passwordError: UILabel!
+    // Error label for password confirmation
+    @IBOutlet private var passwordConfError: UILabel!
     
     // MARK: - Lify Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -33,7 +53,9 @@ final class SecondPageVC: UIViewController {
     
     // MARK: - Actions
 
-    @IBAction func nameTFAction(_ sender: UITextField) {
+    // New name field
+    
+    @IBAction private func nameTFAction(_ sender: UITextField) {
         let currentValue = sender.text
         if currentValue == userModel?.name {
             isSameName = false
@@ -43,44 +65,55 @@ final class SecondPageVC: UIViewController {
         }
     }
 
-    @IBAction func emailTFAction(_ sender: UITextField) {
-        let currentValue = sender.text
-        if currentValue == userModel?.email {
-            isSameEmail = false
-        }
-        else if currentValue != userModel?.email {
+    // New email field
+    
+    @IBAction private func emailTFAction(_ sender: UITextField) {
+        guard let email = sender.text else { return }
+//        guard VerificationService.isValidEmail(email: email!) else { return emailErrorLbl.isHidden = false }
+        if !VerificationService.isValidEmail(email: email) { emailErrorLbl.isHidden = false } else { emailErrorLbl.isHidden = true }
+        if email.isEmpty { emailErrorLbl.isHidden = true }
+        if email != userModel?.email
+        {
             isSameEmail = true
         }
-    }
+        else {
+            isSameEmail = false
+        }
+        
+}
     
-    @IBAction func passwordTFAction(_ sender: UITextField) {
-        let currentValue = sender.text
-        if currentValue == userModel?.password {
+    // New password field
+    
+    @IBAction private func passwordTFAction(_ sender: UITextField) {
+        guard let pass = sender.text, !pass.isEmpty else { return }
+        passwordStrength = VerificationService.isValidPassword(pass: pass)
+        if pass == userModel?.password {
             isSamePassword = false
         }
-        else if currentValue != userModel?.password {
+        else if pass != userModel?.password {
             isSamePassword = true
         }
     }
-    @IBAction func saveBtnAction(_ sender: UIButton) {
-        guard let name = nameTF.text, let email = emailTF.text, let password = passwordTF.text else { return }
+    
+    // Save button action
+    
+    @IBAction private func saveBtnAction(_ sender: UIButton) {
+        guard let name = nameTF.text, let email = emailTF.text, let password = passwordTF.text, email.isEmpty == false, password.isEmpty == false else {
+            return alert(title: "Error", message: "Password and email should be specified", style: .alert)
+        }
         let newUserModel = UserModel(name: name, email: email, password: password)
-        if newUserModel.name != userModel?.name {
-            UserDefaults.standard.set(name, forKey: UserDefaults.Keys.name.rawValue)
-            nameTF.text = ""
+        if newUserModel != userModel {
+            UserDefautltsService.saveUserModel(userModel: newUserModel)
+            alert(title: "Success", message: "Changes are saved", style: .alert)
         }
-        if newUserModel.email != userModel?.email {
-            UserDefaults.standard.set(email, forKey: UserDefaults.Keys.email.rawValue)
-            emailTF.text = ""
+        else {
+            alert(title: "Failure", message: "Nothing to save", style: .alert)
         }
-        if newUserModel.password != userModel?.password {
-            UserDefaults.standard.set(password, forKey: UserDefaults.Keys.password.rawValue)
-            passwordTF.text = "
-        }
-        alert(title: "Success", message: "Changes are saved", style: .alert)
     }
+
     // MARK: - Functions
     
+    // Setup User Interfeice
     private func setupUI() {
         let userName = userModel?.name ?? "Not specified",
             passwordUser = userModel?.password ?? "Not found",
@@ -90,17 +123,10 @@ final class SecondPageVC: UIViewController {
         passwordLabel.text = "Password: \(passwordUser)"
     }
     
-    private func updateContinueBtnState() {
+    // Update "Save" button state
+    private func updateSaveBtnState() {
         saveBtnOut.isEnabled = isSameName || isSameEmail || isSamePassword
     }
-    private func alert(title: String, message: String, style: UIAlertController.Style) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
-        let action = UIAlertAction(title: "Ok", style: .default) { _ in
-        }
-        alertController.addAction(action)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    // MARK: - Navigation
 
+    // MARK: - Navigation
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WelcomeVC: UIViewController {
+final class WelcomeVC:BasicVC {
     
     var UserModel: UserModel?
     
@@ -23,7 +23,7 @@ final class WelcomeVC: UIViewController {
         setupUI()
     }
     // MARK: - Action
-    @IBAction func continueBtnAction() {
+    @IBAction private func continueBtnAction() {
         guard let UserModel = UserModel else { return }
         UserDefautltsService.saveUserModel(userModel: UserModel)
         navigationController?.popToRootViewController(animated: true)

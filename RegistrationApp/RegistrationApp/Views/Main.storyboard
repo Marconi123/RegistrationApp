@@ -133,6 +133,12 @@
                                                     <action selector="emailTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="K2w-NM-c04"/>
                                                 </connections>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email is not valid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33R-4T-WXc">
+                                                <rect key="frame" x="0.0" y="64.5" width="364" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.012550286819999999" blue="0.038377936020000003" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9r4-XK-fT3">
@@ -152,6 +158,12 @@
                                                     <action selector="passwordTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="Fvn-zC-MYG"/>
                                                 </connections>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password is not secure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bix-hS-bNh">
+                                                <rect key="frame" x="0.0" y="69.5" width="364" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.012550286819999999" blue="0.038377936020000003" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tVm-sn-ZfW">
                                                 <rect key="frame" x="0.0" y="74.5" width="364" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -160,6 +172,12 @@
                                                     <action selector="passwordTFAction:" destination="4Gb-O3-KML" eventType="editingChanged" id="blr-0L-ObP"/>
                                                 </connections>
                                             </textField>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password mismatch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shL-eI-RKR">
+                                                <rect key="frame" x="0.0" y="113.5" width="364" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.012550286819999999" blue="0.038377936020000003" alpha="0.8980392157" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gl5-kh-NjX">
                                                 <rect key="frame" x="0.0" y="118.5" width="364" height="15"/>
                                                 <subviews>
@@ -212,14 +230,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="WgX-JT-Fna"/>
                     <connections>
+                        <outlet property="confirmPasswordLbl" destination="tVm-sn-ZfW" id="iie-OG-Xaq"/>
+                        <outlet property="emailErrorLbl" destination="33R-4T-WXc" id="syX-AY-HPc"/>
                         <outlet property="emailLabel" destination="aQD-ke-md1" id="hTX-JS-YWm"/>
                         <outlet property="emailTF" destination="2kB-hC-yAo" id="NzM-ln-YU9"/>
                         <outlet property="nameLabel" destination="lRk-Qh-vIs" id="gal-xf-Qit"/>
                         <outlet property="nameTF" destination="L14-bY-vKa" id="fL3-Tj-MGB"/>
+                        <outlet property="passwordConfError" destination="shL-eI-RKR" id="8RJ-2g-7El"/>
+                        <outlet property="passwordError" destination="bix-hS-bNh" id="4NK-3u-K4h"/>
                         <outlet property="passwordLabel" destination="gvD-cc-grX" id="Ruq-dj-pAf"/>
                         <outlet property="passwordTF" destination="ZWS-v1-OYp" id="vkd-8e-wVj"/>
                         <outlet property="saveBtnOut" destination="NpY-5a-H8n" id="cef-te-LPH"/>
                         <outletCollection property="viewsIndicatorPassword" destination="B38-4X-9kf" collectionClass="NSMutableArray" id="jkQ-CB-n5h"/>
+                        <outletCollection property="viewsIndicatorPassword" destination="j8G-jS-q69" collectionClass="NSMutableArray" id="fWo-ho-ey1"/>
+                        <outletCollection property="viewsIndicatorPassword" destination="Mcb-3Z-ZOk" collectionClass="NSMutableArray" id="klI-5L-qBo"/>
+                        <outletCollection property="viewsIndicatorPassword" destination="Ev8-ip-hVc" collectionClass="NSMutableArray" id="JqW-gK-nO5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1w-sJ-bUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

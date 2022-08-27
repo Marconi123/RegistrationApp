@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SignInVC: UIViewController {
+final class SignInVC:BasicVC {
     // MARK: - IBOutlets
 
     @IBOutlet private var btnSignIn: UIButton!
@@ -24,11 +24,11 @@ final class SignInVC: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func createAnAccountBtn() {
+    @IBAction private func createAnAccountBtn() {
         performSegue(withIdentifier: "goToSignUp", sender: nil)
     }
 
-    @IBAction func loginBtn() {
+    @IBAction private func loginBtn() {
         let userModel = UserDefautltsService.getUserModel(),
             email = emailField.text,
             pass = passwordTextField.text
@@ -44,30 +44,21 @@ final class SignInVC: UIViewController {
     }
 
     // MARK: - Functions
-    
-    private func alert(title: String, message: String, style: UIAlertController.Style) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
-        let action = UIAlertAction(title: "Ok", style: .default) { _ in
-        }
-        alertController.addAction(action)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-   private func setupUI() {
+    private func setupUI() {
         emailField.attributedPlaceholder = NSAttributedString(string: "Email",
                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-       passwordTextField.isSecureTextEntry = true
+        passwordTextField.isSecureTextEntry = true
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let firstPageVC = segue.destination as? FirstPageVC,
-              let userModel = sender as? UserModel {
+           let userModel = sender as? UserModel
+        {
             firstPageVC.userModel = userModel
-              }
+        }
     }
-    
 }
